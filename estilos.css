@@ -1,0 +1,106 @@
+
+    
+/* ----- ----- ----- ----- */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.outer { 
+      position: relative;
+      width: 25%;
+      padding-bottom: 25%;
+    }
+    .inner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #00FF00; 
+    }
+body {
+
+	background-image: url("https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjmx6OWu__gAhUrzlkKHYgyBWQQjRx6BAgBEAU&url=https%3A%2F%2Felcomercio.pe%2Frespuestas%2Fver-peliculas-online-gratis-espanol-latino-hd-2019-mejores-paginas-cine-series-estrenos-cartelera-sub-4k-pelis-castellano-completas-netflix-hbo-go-streaming-espana-mexico-nnda-nnlt-nota-noticia-531757&psig=AOvVaw1KvOX5AeyxTUuv70SCF_Wo&ust=1552578340255080");
+
+}
+
+
+
+a {
+  color: #FF4136; }
+
+.wrap {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto; }
+
+.info {
+  text-align: center;
+  padding: 20px;
+  color: #001F3F;
+  border-bottom: 1px solid #ccc; }
+  .info p {
+    margin-top: 20px; }
+
+.pelicula {
+  /* --------------------------------------- */
+  /* ----- Radio Button */
+  /* --------------------------------------- */
+  /* --------------------------------------- */
+  /* ----- Checkbox */
+  /* --------------------------------------- */ }
+  .pelicula h2 {
+    font-size: 16px;
+    color: #001F3F;
+    margin-bottom: 20px;
+    margin-left: 20px; }
+  .pelicula > div {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc; }
+  .pelicula .radio label,
+  .pelicula .checkbox label {
+    display: inline-block;
+    cursor: pointer;
+    color: #FF4136;
+    position: relative;
+    padding: 5px 15px 5px 51px;
+    font-size: 1em;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .pelicula .radio label:hover,
+    .pelicula .checkbox label:hover {
+      background: rgba(255, 65, 54, 0.1); }
+    .pelicula .radio label:before,
+    .pelicula .checkbox label:before {
+      content: "";
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+      position: absolute;
+      left: 15px;
+      border-radius: 50%;
+      background: none;
+      border: 3px solid #FF4136; }
+  .pelicula input[type="radio"] {
+    display: none; }
+    .pelicula input[type="radio"]:checked + label:before {
+      display: none; }
+    .pelicula input[type="radio"]:checked + label {
+      padding: 5px 15px;
+      background: #FF4136;
+      border-radius: 2px;
+      color: #fff; }
+  .pelicula .checkbox label:before {
+    border-radius: 3px; }
+  .pelicula .checkbox input[type="checkbox"] {
+    display: none; }
+    .pelicula .checkbox input[type="checkbox"]:checked + label:before {
+      display: none; }
+    .pelicula .checkbox input[type="checkbox"]:checked + label {
+      background: #FF4136;
+      color: #fff;
+      padding: 5px 15px; }

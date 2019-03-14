@@ -1,0 +1,102 @@
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	 integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	</head>
+	<body>
+		<div class="container mt-5">
+			<div class="wrap">
+		<div class="info">
+			</body>
+      
+<h1> Buscador de Movies y series </h1>
+<br>
+<br>
+ <h2>Radio Buttons</h2>
+				<input type="radio" name="sexo" id="movie">
+				<label for="pelicula">MOVIES</label>
+		<br>
+				<input type="radio" name="sexo" id="serie">
+				<label for="mujer">SERIES</label>
+				<br>
+    <input type="text" id="formulario" class="form-control">
+
+		
+			</div>
+    <br>
+    <br>
+<button class="btn btn-info mb-2" id="boton">Buscar</button>
+<br>
+<br>
+
+</div>
+
+	<ul id="resultado">
+		
+	</ul>
+</div>
+
+
+<script>
+	const peliculas = [
+	{nombre: 'Titanic', valor: 500},
+	{nombre: 'Viaje a la luna', valor: 500},
+	{nombre: 'La vida es bella', valor: 500},
+	{nombre: 'Los Vengadores', valor: 500},
+	{nombre: 'Cadena perpetua', valor: 500},
+	{nombre: 'King Kong', valor: 500},
+	{nombre: 'Perdicion', valor: 500},
+	{nombre: 'Robo en las alturas', valor: 500},
+	{nombre: 'Polar', valor: 500},
+	{nombre: 'El final de todo', valor: 500},
+	{nombre: 'Matrix', valor: 500},
+	{nombre: 'Ironman', valor: 500},
+	{nombre: 'Titanic', valor: 500},
+	{nombre: 'Escolta', valor: 500},
+	{nombre: 'Un espia y medio', valor: 500},
+	{nombre: 'Loa juegos del Hambre', valor: 500},
+	{nombre: 'Corazones de hierro', valor: 500},
+    {nombre: 'Londres bajo fuego', valor: 500},
+    {nombre: 'Rapido y Furioso 7', valor: 500},
+    {nombre: 'Star Wars', valor: 500},
+    {nombre: 'Jurassic World', valor: 500},
+    {nombre: 'Frozen', valor: 500},
+    {nombre: 'Transformers', valor: 500},
+    {nombre: 'El Señor de los anillos', valor: 500},
+	{nombre: 'Piratas del caribe', valor: 500},
+
+	]
+	const formulario = document.querySelector('#formulario');
+	const boton = document.querySelector('#boton');
+const resultado = document.querySelector('#resultado');
+ const filtrar = ()=>{
+	console.log(formulario.value);
+resultado.innerHTML = ; 
+const texto = formulario.value.toLowerCase();
+for(let pelicula of peliculas){
+	let nombre = pelicula.nombre.toLowerCase();
+	if(nombre.indexOf(texto) !== -1){
+resultado.innerHTML += ` 
+<li>${pelicula.nombre} - Valor: ${pelicula.valor} </li>
+
+` 
+	}
+} 
+
+if(resultado.innerHTML === ''){
+	resultado.innerHTML += `
+	<li>Pelicula no encontrada.....</li>
+	` 
+}
+}
+
+
+
+boton.addEventListener('click',filtrar)	
+formulario.addEventListener('keyup', filtrar)
+
+
+	
+     
